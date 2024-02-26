@@ -3,20 +3,19 @@
 
 % Packages
 \usepackage[a4paper, top=1.8cm, inner=1.8cm, outer=1cm]{geometry}
-\usepackage{multicol}
-\usepackage[czech]{babel}
 \usepackage[T1]{fontenc}
+\usepackage[czech]{babel}
 \usepackage{alltt}
 \usepackage{color}
 \usepackage{changepage}
 \usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{hyperref}
-\usepackage{footnote}
+
 
 %title
 \title{Typografie a publikování -- 1. projekt}
-\author{Katarína Mečiarová\\xmeciak00@stud.fit.vutbr.cz}
+\author{Katarína Mečiarová\\ \href{mailto: xmeciak00@stud.fit.vutbr.cz}{xmeciak00@stud.fit.vutbr.cz}}
 \date{ }
 
 
@@ -26,7 +25,6 @@
     \maketitle
 
 
-    %\begin{multicols}{2}
     \section{Hladká sazba}
         Hladká sazba používá jeden stupeň, druh a řez písma.
         Sází se na stránku s pevně stanovenou šířkou.
@@ -43,14 +41,14 @@
         Existuje \uv{pravidlo}:
 
         \medskip
-        \begin{adjustwidth}{0.8cm}{0.8cm}
+        \begin{adjustwidth}{0.75cm}{0.75cm}
         \hspace{0.3cm}
-        Čím více \textsc{druhů}, \textit{řezů}, {\scriptsize velikostí}, \textcolor{red}{barev} písma a~jiných \texttt{efektů} použijeme, \underline{tím profesionálněji}
-        bude {\fontfamily{pzc}\selectfont dokument} vypadat. Čtenář tím bude {\huge \bfseries vždy nadšen!}
+        Čím více \textsc{druhů}, \emph{řezů}, {\scriptsize velikostí}, \textcolor{red}{barev} písma a~jiných \texttt{efektů} použijeme, \underline{tím profesionálněji}
+        bude {\fontfamily{pzc}\selectfont dokument} vypadat. Čtenář tím bude {\Large \bfseries vždy nadšen!}
         \end{adjustwidth}
         \medskip
 
-        \textsc{Tímto pravidlem se nesmíte \underline{\textbf{\MakeUppercase{\scriptsize nikdy}}} řídit.}
+        \textsc{Tímto pravidlem se nesmíte \underline{\textbf{\MakeUppercase{\footnotesize nikdy}}} řídit.}
         Příliš časté zvýrazňování textových elementů a změny {\tiny velikosti} písma jsou známkou \textbf{amatérismu} autora a působí \texttt{velmi rušivě}.
         Dobře navržený dokument nemá obsahovat více než 4 řezy či druhy písma.
         Dobře navržený dokument je \underline{decentní, ne chaotický.}
@@ -64,7 +62,7 @@
 
 
     \section{Další rady:}
-        \begin{itemize}[itemsep=2pt]
+        \begin{itemize}
             \item Nadpis nesmí končit dvojtečkou a nesmí obsahovat odkazy na obrázky, citace, poznámky pod čarou, ...
             \item Nadpisy, číslování a odkazy na číslované elementy musí být sázeny příkazy k tomu určenými. Číslování sekcí tohoto dokumentu je zajištěno příkazem \verb|\section|.
 
@@ -95,7 +93,7 @@
         Druhou odlišností je pravidlo pro sázení konců řádků.
         V české sazbě do bloku by řádek neměl končit osamocenou jednopísmennou předložkou nebo spojkou.
         Spojkou \uv{a} končit může pouze při sazbě do šířky 25 liter.
-        Abychom \LaTeX u zabránili v sázení osamocených předložek, spojujeme je s následujícím slovem \textit{nezlomitelnou mezerou}.
+        Abychom \LaTeX u zabránili v sázení osamocených předložek, spojujeme je s následujícím slovem \emph{nezlomitelnou mezerou}.
         Tu sázíme pomocí znaku \~{ } (vlnka, tilda).
         Pro systematické doplnění vlnek slouží volně šiřitelný program vlna od pana Olšáka\footnote[2]{Viz \href{http://petr.olsak.net/ftp/olsak/vlna/}{\url{http://petr.olsak.net/ftp/olsak/vlna/}}}
         , který je vhodné si v rámci projektu vyzkoušet.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2023.9.26)  26 FEB 2024 01:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=latex 2023.9.26)  28 FEB 2024 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -49,6 +49,11 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks17
 )
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
@@ -94,7 +99,7 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip49
 \enit@outerparindent=\dimen148
-\enit@toks=\toks18
+\enit@toks=\toks20
 \enit@inbox=\box50
 \enit@count@id=\count267
 \enitdp@description=\count268
@@ -217,10 +222,10 @@ File: hdvips.def 2021-06-07 v7.00m Hyperref driver for dvips
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
 File: pdfmark.def 2021-06-07 v7.00m Hyperref definitions for pdfmark specials
-\pdf@docset=\toks19
+\pdf@docset=\toks21
 \pdf@box=\box51
-\pdf@toks=\toks20
-\pdf@defaulttoks=\toks21
+\pdf@toks=\toks22
+\pdf@defaulttoks=\toks23
 \HyField@AnnotCount=\count277
 \Fld@listcount=\count278
 \c@bookmark@seq@number=\count279
@@ -254,24 +259,24 @@ File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
 (./proj1.aux)
 \openout1 = `proj1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -307,7 +312,7 @@ LaTeX Font Info:    ... okay on input line 23.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 24.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -319,38 +324,38 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count284
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
 
 (./proj1.out) (./proj1.out)
 \@outlinefile=\write3
 \openout3 = `proj1.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 26.
+(Font)              <12> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 26.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 26.
+(Font)              <6> on input line 27.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-6.
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 46.
+(Font)              <7> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 46.
-LaTeX Font Info:    Trying to load font information for T1+pzc on input line 47
+(Font)              <5> on input line 47.
+LaTeX Font Info:    Trying to load font information for T1+pzc on input line 48
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pzc.fd
 File: t1pzc.fd 2020/03/25 font definitions for T1/pzc.
 )
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <10> not available
-(Font)              Font shape `T1/pzc/m/it' tried instead on input line 47.
+(Font)              Font shape `T1/pzc/m/it' tried instead on input line 48.
  [1
 
 
@@ -359,12 +364,12 @@ Package rerunfilecheck Info: File `proj1.out' has not changed.
 (rerunfilecheck)             Checksum: 45DDC3F6948A1739CC53DC6BDBF1EE3C;545.
  ) 
 Here is how much of TeX's memory you used:
- 9836 strings out of 478288
- 156533 string characters out of 5849315
- 493872 words of memory out of 5000000
- 27915 multiletter control sequences out of 15000+600000
- 484622 words of font info for 55 fonts, out of 8000000 for 9000
+ 9870 strings out of 478288
+ 157374 string characters out of 5849315
+ 494268 words of memory out of 5000000
+ 27946 multiletter control sequences out of 15000+600000
+ 483932 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,9n,67p,318b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on proj1.dvi (1 page, 12880 bytes).
+Output written on proj1.dvi (1 page, 12876 bytes).

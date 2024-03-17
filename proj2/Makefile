@@ -1,4 +1,4 @@
-# K suboru: proj1.tex
+# K suboru: proj2.tex
 # Datum:    22.2.2024
 # Autor:    Jiri Pavela (ipavela@fit.vutbr.cz)
 # Projekt:  ITY projekt 1

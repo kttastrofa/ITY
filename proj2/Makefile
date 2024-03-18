@@ -1,9 +1,9 @@
 # K suboru: proj2.tex
 # Datum:    22.2.2024
 # Autor:    Jiri Pavela (ipavela@fit.vutbr.cz)
-# Projekt:  ITY projekt 1
+# Projekt:  ITY projekt 2
 
-PROJ=proj1
+PROJ=proj2
 
 $(PROJ).pdf: $(PROJ).tex
 	latex $(PROJ).tex

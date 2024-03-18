@@ -1,120 +1,201 @@
 % Preamble
-\documentclass[a4paper, 10pt, twocolumn]{article}[25.2.2024]
-
-% Packages
+\documentclass[a4paper, 10pt, twocolumn, article][18.3.2024]
 \usepackage[top=1.8cm, inner=1.8cm, outer=1cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[czech]{babel}
+
+% Packages
 \usepackage{alltt}
-\usepackage{color}
 \usepackage{changepage}
 \usepackage{enumitem}
 \usepackage{setspace}
-\usepackage[hidelinks]{hyperref}
-
-
-%title
-\title{Typografie a publikování -- 1. projekt}
-\author{Katarína Mečiarová\\ \href{mailto: xmeciak00@stud.fit.vutbr.cz}{xmeciak00@stud.fit.vutbr.cz}}
-\date{ }
+\usepackage{amsmath}
 
 
 %document
 \begin{document}
+%title
+\begin{titlepage}
+    {Vysoké učení technické v Brně}
+    Fakulta informačních technologií
+        \title{Typografie a publikování –– 2. projekt}
+    Sazba dokumentů a matematických výrazů
+    2024 Katarína Mečiarová (xmeciak00)
+\end{titlepage}
 
-    \maketitle
+    \section{Úvod}
+    V této úloze si vysázíme titulní stranu a kousek ma-
+    tematického textu, v němž se vyskytují například De-
+    finice 1 nebo rovnice (2) na straně 1. Pro vytvoření
+    těchto odkazů používáme kombinace příkazů \label,
+    \ref, \eqref a \pageref. Před odkazy patří nezlo-
+    mitelná mezera. Pro zvýrazňování textu se používají
+    příkazy \verb a \emph.
+    Titulní strana je vysázena prostředím titlepage
+    a nadpis je v optickém středu s využitím přesného zla-
+    tého řezu, který byl probrán na přednášce. Dále jsou
+    na titulní straně čtyři různé velikosti písma a mezi
+    dvojicemi řádků textu je použito řádkování se zada-
+    nou relativní velikostí 0,5 em a 0,6 em1.
+    1 Matematický text
+    Matematické symboly a výrazy v plynulém textu jsou
+    v prostředí math. Definice a věty sázíme v prostředí
+    definovaném příkazem \newtheorem z balíku amsthm.
+    Tato prostředí obracejí význam \emph: uvnitř textu
+    sázeného kurzívou se zvýrazňuje písmem v základ-
+    ním řezu. Někdy je vhodné použít konstrukci ${}$
+    nebo \mbox{}, která zabrání zalomení (matematic-
+    kého) textu. Pozor také na tvar i sklon řeckých písmen:
+    srovnejte \epsilon a \varepsilon, \Xi a \varXi.
+    Definice 1. Konečný přepisovací stroj neboli Mea-
+    lyho automat je definován jako uspořádaná pětice
+    tvaru M = (Q, Σ, Γ, δ, q0), kde:
+    • Q je konečná množina stavů,
+    • Σ je konečná vstupní abeceda,
+    • Γ je konečná výstupní abeceda,
+    • δ : Q × Σ → Q × Γ je totální přechodová funkce,
+    • q0 ∈ Q je počáteční stav.
+    1.1 Podsekce s definicí
+    Pomocí přechodové funkce δ zavedeme novou funkci δ∗
+    pro překlad vstupních slov u ∈ Σ∗ do výstupních slov
+    w ∈ Γ ∗.
+    Definice 2. Nechť M = (Q, Σ, Γ, δ, q0) je Mealyho
+    automat. Překládací funkce δ∗ : Q × Σ∗ × Γ ∗ → Γ ∗
+    je pro každý stav q ∈ Q, symbol x ∈ Σ, slova u ∈ Σ∗,
+    w ∈ Γ ∗ definována rekurentním předpisem:
+    • δ∗(q, ε, w) = w
+    • δ∗(q, xu, w) = δ∗(q′, u, wy), kde (q′, y) = δ(q, x)
+    1Použijte správný typ mezery mezi číslem a jednotkou.
+    1.2 Rovnice
+    Složitější matematické formule sázíme mimo plynulý
+    text pomocí prostředí displaymath. Lze umístit i více
+    výrazů na jeden řádek, ale pak je třeba tyto vhodně
+    oddělit, například pomocí \quad, při dostatku místa
+    i \qquad.
+    gan /∈ ABn
+    y1
+    0 − 5
+    √
+    x + 7
+    √y x > y2 ≥ y3
+    Velikost závorek a svislých čar je potřeba přizpů-
+    sobit jejich obsahu. Velikost lze stanovit explicitně,
+    anebo pomocí \left a \right. Kombinační čísla sá-
+    zejte makrem \binom.
+    ∣
+    ∣
+    ∣⋃ P
+    ∣
+    ∣
+    ∣ = ∑
+    ∅6=X⊆P
+    (−1)|X|−1 ∣
+    ∣
+    ∣⋂ X
+    ∣
+    ∣
+    ∣
+    Fn+1 =
+    (n
+    0
+    )
+    +
+    (n − 1
+    1
+    )
+    +
+    (n − 2
+    2
+    )
+    + · · · +
+    (⌈ n
+    2
+    ⌉
+    ⌊ n
+    2
+    ⌋
+    )
+    V rovnici (1) jsou tři typy závorek s různou expli-
+    citně definovanou velikostí. Obě rovnice mají svisle za-
+    rovnaná rovnítka. Použijte k tomu vhodné prostředí.
+    ({
+        b ⊗ [c1 ⊕ c2
+        ] ◦ a
+    } 2
+    3
+    )
+    = logz x (1)
+    ∫ b
+    a
+    f (x) dx = −
+    ∫ a
+    b
+    f (y) dy (2)
+    V této větě vidíme, jak se vysází proměnná určující
+    limitu v běžném textu: limm→∞ f (m). Podobně je to
+    i s dalšími symboly jako ⋃
+    N ∈M N či ∑m
+    i=1 x2
+    i . S vynu-
+    cením méně úsporné sazby příkazem \limits budou
+    vzorce vysázeny v podobě lim
+    m→∞ f (m) a m∑
+    i=1
+    x2
+    i .
+    2 Matice
+    Pro sázení matic se používá prostředí array a závorky
+    s výškou nastavenou pomocí \left, \right.
+    D =
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    a11 a12 · · · a1n
+    a21 a22 · · · a2n
+    ... ... . . . ...
+    am1 am2 · · · amn
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    =
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣
+    x y
+    t w
+    ∣
+    ∣
+    ∣
+    ∣
+    ∣ = xw − yt
+    Prostředí array lze úspěšně využít i jinde, například
+    na pravé straně následující rovnosti.
+    (n
+    k
+    )
+    =
+        { n!
+    k!(n−k)! pro 0 ≤ k ≤ n
+    0 jinak
+    1
 
-
-    \section{Hladká sazba}
-        Hladká sazba používá jeden stupeň, druh a řez písma.
-        Sází se na stránku s pevně stanovenou šířkou.
-        Skládá se z odstavců. Odstavec končí východovou řádkou.
-        Věty nesmějí začínat číslicí.
-
-        Zvýraznění barvou, podtržením, ani změnou písma se v~odstavcích nepoužívá.
-        Hladká sazba je určena především pro delší texty, jako je beletrie.
-        Porušení konzistence sazby působí v textu rušivě a unavuje čtenářův zrak.
-
-    \section{Smíšená sazba}
-        Smíšená sazba má o něco volnější pravidla.
-        Klasická hladká sazba se doplňuje o další řezy písma pro zvýraznění důležitých pojmů.
-        Existuje \uv{pravidlo}:
-
-        \medskip
-        \begin{adjustwidth}{0.75cm}{0.75cm}
-        \hspace{0.3cm}
-        Čím více \textsc{druhů}, \emph{řezů}, {\scriptsize velikostí}, \textcolor{red}{barev} písma a~jiných \texttt{efektů} použijeme, \underline{tím profesionálněji}
-        bude {\fontfamily{pzc}\selectfont dokument} vypadat. Čtenář tím bude {\Large \bfseries vždy nadšen!}
-        \end{adjustwidth}
-        \medskip
-
-        \textsc{Tímto pravidlem se nesmíte \underline{\textbf{nikdy}} řídit.}
-        Příliš časté zvýrazňování textových elementů a změny {\tiny velikosti} písma jsou známkou \textbf{amatérismu} autora a působí \texttt{velmi rušivě}.
-        Dobře navržený dokument nemá obsahovat více než 4 řezy či druhy písma.
-        Dobře navržený dokument je \underline{decentní, ne chaotický.}
-
-        Důležitým znakem správně vysázeného dokumentu je konzistence -- například \textbf{tučný řez} písma bude vyhrazen pouze pro klíčová slova, \textit{kurzíva} pouze pro doposud neznámé pojmy a nebude se to míchat.
-        Kurzíva nepůsobí tak rušivě a používá se častěji.
-        V \LaTeX u ji sázíme raději příkazem \verb|\emph{text}| než \verb|\textit{text}|.
-
-        Smíšená sazba se nejčastěji používá pro sazbu vědeckých článků a technických zpráv.
-        U delších dokumentů vědeckého či technického charakteru je zvykem vysvětlit význam různých typů zvýraznění v úvodní kapitole.
-
-
-    \section{Další rady:}
-        \begin{itemize}
-            \item Nadpis nesmí končit dvojtečkou a nesmí obsahovat odkazy na obrázky, citace, poznámky pod čarou, ...
-            \item Nadpisy, číslování a odkazy na číslované elementy musí být sázeny příkazy k tomu určenými. Číslování sekcí tohoto dokumentu je zajištěno příkazem \verb|\section|.
-
-            \item Poznámky pod čarou\footnote[1]{Příliš mnoho poznámek pod čarou čtenáře zbytečně rozptyluje.} používejte opravdu střídmě. (Šetřete i s textem v závorkách.)
-
-            \item Bezchybným pravopisem a sazbou dáváme najevo úctu ke čtenáři. Odbytý text s chybami bude čtenář právem považovat za nedůvěryhodný.
-
-            \item Výčet (v \LaTeX u lze sázet např. pomocí prostředí \texttt{itemize} nebo \texttt{enumerate}) ani obrázek nesmí začínat hned pod nadpisem a nesmí tvořit celou kapitolu.
-
-            \item Nepoužívejte velké množství malých obrázků. Zvažte, zda je nelze seskupit.
-        \end{itemize}
-
-
-
-
-
-
-    \section{České odlišnosti}
-        Česká sazba se oproti okolnímu světu v některých aspektech mírně liší.
-        Jednou z odlišností je sazba uvozovek.
-        Uvozovky se v češtině používají převážně pro zobrazení přímé řeči, zvýraznění přezdívek a ironie.
-        V češtině se používají uvozovky typu \uv{9966} místo ''anglických uvozovek''.
-        Lze je sázet připravenými příkazy nebo při použití UTF-8 kódování i přímo.
-
-        Ve smíšené sazbě se řez uvozovek řídí řezem prvního uvozovaného slova.
-        Pokud je uvozována celá věta, sází se koncová tečka před uvozovku, pokud se uvozuje slovo nebo část věty, sází se tečka za uvozovku.
-
-        Druhou odlišností je pravidlo pro sázení konců řádků.
-        V české sazbě do bloku by řádek neměl končit osamocenou jednopísmennou předložkou nebo spojkou.
-        Spojkou \uv{a} končit může pouze při sazbě do šířky 25 liter.
-        Abychom \LaTeX u zabránili v sázení osamocených předložek, spojujeme je s následujícím slovem \emph{nezlomitelnou mezerou}.
-        Tu sázíme pomocí znaku \~{ } (vlnka, tilda).
-        Pro systematické doplnění vlnek slouží volně šiřitelný program vlna od pana Olšáka\footnote[2]{Viz \href{http://petr.olsak.net/ftp/olsak/vlna/}{\url{http://petr.olsak.net/ftp/olsak/vlna/}}}
-        , který je vhodné si v rámci projektu vyzkoušet.
-
-        Balíček \texttt{fontenc} slouží ke korektnímu kódovaní znaků s diakritikou, aby bylo možno v textu vyhledávat a kopírovat z něj.
-
-
-    \section{Závěr}
-        Tento dokument schválně obsahuje několik typografických prohřešků.
-        Sekce 2 a 3 obsahují typografické chyby.
-        V kontextu celého textu je jistě snadno najdete.
-        Je dobré znát možnosti \LaTeX u, ale je také nutné vědět, kdy je nepoužít.
 
 
 \end{document}
-
-
-
-
-Vysoké učení technické v BrněFakulta informačních technologiíTypografie a publikování –– 2. projektSazba dokumentů a matematických výrazů2024Libor Škarvada (iskarvada)
-Úvod
-V této úloze si vysázíme titulní stranu a kousek ma-tematického textu, v němž se vyskytují například De-finice 1 nebo rovnice (2) na straně 1. Pro vytvořenítěchto odkazů používáme kombinace příkazů\label,\ref,\eqrefa\pageref. Před odkazy patří nezlo-mitelná mezera. Pro zvýrazňování textu se používajípříkazy\verba\emph.Titulní strana je vysázena prostředímtitlepagea nadpis je v optickém středu s využitímpřesnéhozla-tého řezu, který byl probrán na přednášce. Dále jsouna titulní straně čtyři různé velikosti písma a mezidvojicemi řádků textu je použito řádkování se zada-nou relativní velikostí 0,5 em a 0,6 em1.1  Matematický textMatematické symboly a výrazy v plynulém textu jsouv prostředímath. Definice a věty sázíme v prostředídefinovaném příkazem\newtheoremz balíkuamsthm.Tato prostředí obracejí význam\emph: uvnitř textusázeného kurzívou se zvýrazňuje písmem v základ-ním řezu. Někdy je vhodné použít konstrukci${}$nebo\mbox{}, která zabrání zalomení (matematic-kého) textu. Pozor také na tvar i sklon řeckých písmen:srovnejte\epsilona\varepsilon,\Xia\varXi.Definice 1.Konečný přepisovací strojneboliMea-lyho automatje definován jako uspořádaná pěticetvaruM= (Q,Σ,Γ,δ,q0), kde:•Qje konečná množinastavů,•Σje konečnávstupní abeceda,•Γje konečnávýstupní abeceda,•δ:Q×Σ→Q×Γje totálnípřechodová funkce,•q0∈Qjepočáteční stav.1.1  Podsekce s definicíPomocí přechodové funkceδzavedeme novou funkciδ∗pro překlad vstupních slovu∈Σ∗do výstupních slovw∈Γ∗.Definice 2.NechťM= (Q,Σ,Γ,δ,q0)je Mealyhoautomat.Překládací funkceδ∗:Q×Σ∗×Γ∗→Γ∗je pro každý stavq∈Q, symbolx∈Σ, slovau∈Σ∗,w∈Γ∗definována rekurentním předpisem:•δ∗(q,ε,w) =w•δ∗(q,xu,w) =δ∗(q′,u,wy), kde(q′,y) =δ(q,x)1Použijte správný typ mezery mezi číslem a jednotkou.1.2  RovniceSložitější matematické formule sázíme mimo plynulýtext pomocí prostředídisplaymath. Lze umístit i vícevýrazů na jeden řádek, ale pak je třeba tyto vhodněoddělit, například pomocí\quad, při dostatku místai\qquad.gan/∈ABny10−5√x+7√y   x > y2≥y3Velikost závorek a svislých čar je potřeba přizpů-sobit jejich obsahu. Velikost lze stanovit explicitně,anebo pomocí\lefta\right. Kombinační čísla sá-zejte makrem\binom.∣∣∣⋃P∣∣∣=∑∅6=X⊆P(−1)|X|−1∣∣∣⋂X∣∣∣Fn+1=(n0)+(n−11)+(n−22)+···+(⌈n2⌉⌊n2⌋)V rovnici (1) jsou tři typy závorek s různouexpli-citnědefinovanou velikostí. Obě rovnice mají svisle za-rovnaná rovnítka. Použijte k tomu vhodné prostředí.({b⊗[c1⊕c2]◦a}23)=  logzx(1)∫baf(x) dx=−∫abf(y) dy(2)V této větě vidíme, jak se vysází proměnná určujícílimitu v běžném textu:limm→∞f(m). Podobně je toi s dalšími symboly jako⋃N∈MNči∑mi=1x2i. S vynu-cením méně úsporné sazby příkazem\limitsbudouvzorce vysázeny v podobělimm→∞f(m)am∑i=1x2i.2  MaticePro sázení matic se používá prostředíarraya závorkys výškou nastavenou pomocí\left,\right.D=∣∣∣∣∣∣∣∣∣∣a11a12···a1na21a22···a2n............am1am2···amn∣∣∣∣∣∣∣∣∣∣=∣∣∣∣∣x  yt  w∣∣∣∣∣=xw−ytProstředíarraylze úspěšně využít i jinde, napříkladna pravé straně následující rovnosti.(nk)={n!k!(n−k)!pro0≤k≤n0jinak1
-

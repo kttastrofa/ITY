@@ -37,14 +37,14 @@
 
 
 \section*{Úvod}
-V této úloze si vysázíme titulní stranu a kousek matematického textu, v němž se vyskytují například Definice 1 nebo rovnice (2) na straně 1 . Pro vytvoření těchto odkazů používáme kombinace příkazů \textbackslash label, $\backslash$ ref, leqref a \textbackslash pageref. Před odkazy patří nezlomitelná mezera. Pro zvýrazňování textu se používají př́kazy \textbackslash verb a \textbackslash emph.
+V této úloze si vysázíme titulní stranu a kousek matematického textu, v němž se vyskytují například Definice 1 nebo rovnice (2) na straně 1 . Pro vytvoření těchto odkazů používáme kombinace příkazů \verb|\label|, \verb|\ref|, \verb|\eqref|a \verb|\pageref|. Před odkazy patří nezlomitelná mezera. Pro zvýrazňování textu se používají př́kazy \verb|\verb| a \verb|\emph|.
 
-Titulní strana je vysázena prostředím titlepage a nadpis je v optickém středu s využitím presného zlatého řezu, který byl probrán na přednášce. Dále jsou na titulní straně čtyři různé velikosti písma a mezi dvojicemi řádkư textu je použito řádkování se zadanou relativní velikostí $0,5 \mathrm{em}$ a $0,6 \mathrm{em}^{1}$.
+Titulní strana je vysázena prostředím \verb|titlepage| a nadpis je v optickém středu s využitím \emph{přesného} zlatého řezu, který byl probrán na přednášce. Dále jsou na titulní straně čtyři různé velikosti písma a mezi dvojicemi řádkư textu je použito řádkování se zadanou relativní velikostí $0,5 \mathrm{em}$ a $0,6 \mathrm{em}^{1}$.
 
 \section*{1 Matematický text}
-Matematické symboly a výrazy v plynulém textu jsou v prostředí math. Definice a věty sázíme $\mathrm{v}$ prostředí definovaném příkazem \textbackslash newtheorem z balíku amsthm. Tato prostředí obracejí význam \textbackslash emph: uvnitř textu sázeného kurzívou se zvýrazňuje písmem v základním řezu. Někdy je vhodné použít konstrukci $\$\{\}$ nebo \textbackslash mbox\{\}, která zabrání zalomení (matematického) textu. Pozor také na tvar i sklon řeckých písmen: srovnejte \textbackslash epsilon a \textbackslash varepsilon, \textbackslash Xi a \textbackslash varXi.
+Matematické symboly a výrazy v plynulém textu jsou v prostředí \verb|math|. Definice a věty sázíme v prostředí definovaném příkazem \verb|\newtheorem| z balíku \verb|amsthm|. Tato prostředí obracejí význam \verb|\emph|: uvnitř textu sázeného kurzívou se zvýrazňuje písmem v základním řezu. Někdy je vhodné použít konstrukci \verb|${}$| nebo \verb|\mbox{}|, která zabrání zalomení (matematického) textu. Pozor také na tvar i sklon řeckých písmen: srovnejte \verb|\epsilon| a \verb|\varepsilon|, \verb|\Xi| a \verb|\varXi|.\\
 
-Definice 1. Konečný přepisovací stroj neboli Mealyho automat je definován jako uspoŕádaná pětice tvaru $M=\left(Q, \Sigma, \Gamma, \delta, q_{0}\right), k d e:$
+\newtheorem{Definice 1.}{\emph{Konečný přepisovací stroj} neboli \emph{Mealyho automat} je definován jako uspoŕádaná pětice tvaru M = (Q, Σ, Γ, δ, q0), kde:}
 
 \begin{itemize}
   \item Q je konečná množina stavů,

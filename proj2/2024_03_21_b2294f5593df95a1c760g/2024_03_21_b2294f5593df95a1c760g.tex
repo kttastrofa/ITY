@@ -1,39 +1,42 @@
-% Preamble
-\documentclass[a4paper, 11pt, twocolumn]{article}[25.2.2024]
-
-% Packages
-\usepackage[top=1.8cm, inner=1.8cm, outer=1cm]{geometry}
+\documentclass[10pt]{article}
+\usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[czech]{babel}
-\usepackage{alltt}
-\usepackage{changepage}
-\usepackage{enumitem}
-\usepackage{setspace}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[version=4]{mhchem}
 \usepackage{stmaryrd}
 
+\title{VYSOKÉ UČENÍ TECHNICKÉ V BRNĚ FAKULTA INFORMAČNÍCH TECHNOLOGIÍ }
 
-%document
+
+\author{Typografie a publikování - 2. projekt\\
+Sazba dokumentů a matematických výrazů}
+\date{}
+
+
+%New command to display footnote whose markers will always be hidden
+\let\svthefootnote\thefootnote
+\newcommand\blfootnotetext[1]{%
+  \let\thefootnote\relax\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \let\thefootnote\svthefootnote%
+}
+
+%Overriding the \footnotetext command to hide the marker if its value is `0`
+\let\svfootnotetext\footnotetext
+\renewcommand\footnotetext[2][?]{%
+  \if\relax#1\relax%
+    \ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+  \else%
+    \if?#1\ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+    \else\svfootnotetext[#1]{#2}\fi%
+  \fi
+}
+
 \begin{document}
-    %title
-    \begin{titlepage}
-        \begin{center}
-            \Huge\textsc{Vysoké učení technické v Brně}\\
-            \huge\textsc{Fakulta informačních technologií}\\
-            \vspace{\stretch{0.382}}
-            {Typografie a publikování –– 2. projekt}\\
-                Sazba dokumentů a matematických výrazů\\
-            \vspace{\stretch{0.618}}
-        \end{center}
-        {\LARGE 2024 \hfill
-        Katarína Mečiarová (xmeciak00)}
-     
-\end{titlepage}
-
+\maketitle
 
 
 \section*{Úvod}

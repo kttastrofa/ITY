@@ -1,0 +1,111 @@
+%preambula
+\documentclass[11pt]{article}
+
+%packages
+\package{geometry}
+\package{babel}[czech]
+\package{times}
+\package{picture}
+\package{tabbing}
+\usepackage[hidelinks]{hyperref}
+
+
+
+%pack++
+\geometry{a4paper,
+          total={17cm, 24cm},
+          left=2cm,
+          top=3cm,}
+\hypersetup{colorlinks=true,
+            linkcolor=black,
+            filecolor=black,
+            urlcolor=black,}
+
+
+%document
+\begin{document}
+    %titulna strana
+    \begin{titlepage}
+        \begin{center}
+            \Huge\textsc{Vysoké učení technické v Brně}\\
+            \huge\textsc{Fakulta informačních technologií}\\
+            \vspace{\stretch{0.382}}
+            {Typografie a publikování –– 3. projekt}\\
+            \Huge{Tabulky a obrázky}\\
+            \vspace{\stretch{0.618}}
+        \end{center}
+        {\LARGE 27. března 2024 \hfill
+        Katarína Mečiarová (xmeciak00)}
+
+    \end{titlepage}
+
+%torzo
+    \section{Úvodní strana}
+        Název práce umístěte do zlatého řezu a nezapomeňte uvést dnešní datum a vaše jméno a příjmení.
+
+    \section{Tabulky}
+        Pro sázení tabulek můžeme použít bud prostředí \verb|tabbing| nebo prostředí \verb|tabular|.
+
+        \subsection{Prostředí \verb|tabbing|}
+            Při použití \verb|tabbing| vypadá tabulka následovně:
+            \begin{tabbing}
+                    Ovoce           \= Cena     \= Množství     \\
+                    Jablka          \> 25,90    \> 3 kg         \\
+                    Hrušky          \> 27,40    \> 2,5 kg       \\
+                    Vodní melouny   \> 35,-     \> 1 kus        \\
+            \end{tabbing}
+            %\\
+            Toto prostředí se dá také použít pro sázení algoritmů, ovšem vhodnější je použít prostředí \verb|algorithm| nebo \verb|algorithm2e| (viz sekce 3).
+
+        \subsection{Prostředí \verb|tabular|}
+            Další možností, jak vytvořit tabulku, je použít prostředí \verb|tabular|. Tabulky pak budou vypadat takto\footnote[1]{Kdyby byl problem s \verb|cline|, zkuste se podívat třeba sem: \href{http://www.abclinuxu.cz/tex/poradna/show/325037}{http://www.abclinuxu.cz/tex/poradna/show/325037}.}:
+
+            \begin{center}
+                \begin{tabular}{|l|c|c|}
+                    \hline
+                    \multirow{2}{*}{Měna} & \multicolumn{2}{|c|}{Cena} \\
+
+                                            \cline { 2 - 3 }
+                                            & nákup     & prodej \\
+
+                    \hline
+                                EUR         & 25,475    & 27,045    \\
+                                GBP         & 28,835    & 30,705    \\
+                                USD         & 22,943    & 24,357    \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+
+            Tabulka 1: Tabulka kurzů $\mathrm{k}$ dnešnímu dni
+        %todo bordel upravit do poradku = 3 tabulky, podla [] zarovnane do riadku, nem 1 velka lol
+            \begin{center}
+                \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+                    \hline
+                    &  & \multicolumn{2}{|c|}{\multirow{2}{*}}{$A \wedge B$} & \multicolumn{4}{|c|}{$B$} & \multicolumn{2}{|c|}{\multirow{2}{*}}{$A \vee B$} & \multicolumn{4}{|c|}{$B$} & \multicolumn{2}{|c|}{\multirow{2}{*}}{$A \rightarrow B$} & \multicolumn{4}{|c|}{$B$} \\
+                    \hline
+                    $\frac{A}{\mathbf{P}}$ & $\frac{\neg A}{\mathrm{~N}}$ &  &  & $\mathbf{P}$ & O & $\mathbf{X}$ & $\mathbf{N}$ &  &  & $\mathbf{P}$ & $\mathbf{O}$ & $\mathbf{X}$ & $\mathbf{N}$ &  &  & $\mathbf{P}$ & O & $\mathbf{X}$ & $\mathbf{N}$ \\
+                    \hline
+                    $\frac{1}{0}$ & $\frac{\mathrm{N}}{\mathrm{O}}$ &  & $\mathbf{P}$ & $\mathrm{P}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{N}$ &  & $\mathbf{P}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ &  & $\mathbf{P}$ & $\mathrm{P}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{N}$ \\
+                    \hline
+                    $\frac{U}{Y}$ & $\frac{\mathrm{U}}{\mathrm{Y}}$ & $\Delta$ & 0 & $\mathrm{O}$ & $\mathrm{O}$ & $\bar{N}$ & $\mathrm{~N}$ & 4 & 0 & $\mathrm{P}$ & $\mathrm{O}$ & $\mathrm{P}$ & $\mathrm{O}$ & 4 & $\mathbf{O}$ & $\bar{P}$ & $\mathrm{O}$ & $\mathrm{P}$ & $\overline{\mathrm{O}}$ \\
+                    \hline
+                    $\mathbf{A}$ & $\frac{A}{D}$ & A & $\mathbf{X}$ & $\mathrm{X}$ & $\mathrm{N}$ & $\mathrm{X}$ & $\mathrm{N}$ &  & $\mathbf{X}$ & $\mathrm{P}$ & $\mathrm{P}$ & $X$ & $\mathrm{X}$ & $A$ & $\mathbf{X}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{X}$ & $\bar{X}$ \\
+                    \hline
+                    N & $P$ &  & $\mathbf{N}$ & $\bar{N}$ & $\mathrm{~N}$ & $\bar{N}$ & $\mathrm{~N}$ &  & $\mathbf{N}$ & $\mathrm{P}$ & $\mathrm{O}$ & $X$ & $\mathrm{~N}$ &  & $\mathbf{N}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+            Tabulka 2: Protože Kleeneho trojhodnotová logika už je „zastaralá“, uvádíme si zde příklad čtyřhodnotové logiky
+
+
+    \section{Algoritmy}
+        Pokud budeme chtít vysázet algoritmus, můžeme použít prostředí \verb|algorithm|\footnote[2]{Pro nápovědu, jak zacházet s prostředím \verb|algorithm|, mužeme zkusit tuhle stránku:\href{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf}{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf}.} nebo \evrb|algorithm2|\footnote[3]{Pro \verb|algorithm2| zase tuhle: \href{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}.} Příklad použití prostředí \verb|algorithm2e| viz Algoritmus 1.
+
+
+    \section{Obrázky}
+
+
+
+\end{document}

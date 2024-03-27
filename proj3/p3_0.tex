@@ -1,0 +1,161 @@
+\documentclass[10pt]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{multirow}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{ {./images/} }
+
+\title{VYSOKÉ UČENÍ TECHNICKÉ V BRNĚ FAKULTA INFORMAČNÍCH TECHNOLOGIÍ }
+
+
+\author{Typografie a publikování-3. projekt\\
+Tabulky a obrázky}
+\date{}
+
+
+%New command to display footnote whose markers will always be hidden
+\let\svthefootnote\thefootnote
+\newcommand\blfootnotetext[1]{%
+  \let\thefootnote\relax\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \let\thefootnote\svthefootnote%
+}
+
+%Overriding the \footnotetext command to hide the marker if its value is `0`
+\let\svfootnotetext\footnotetext
+\renewcommand\footnotetext[2][?]{%
+  \if\relax#1\relax%
+    \ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+  \else%
+    \if?#1\ifnum\value{footnote}=0\blfootnotetext{#2}\else\svfootnotetext{#2}\fi%
+    \else\svfootnotetext[#1]{#2}\fi%
+  \fi
+}
+
+\begin{document}
+\maketitle
+
+
+\section*{1 Úvodní strana}
+Název práce umístěte do zlatého řezu a nezapomeňte uvést dnešní datum a vaše jméno a příjmení.
+
+\section*{2 Tabulky}
+Pro sázení tabulek můžeme použít bud prostředí tabbing nebo prostředí tabular.
+
+\subsection*{2.1 Prostředí tabbing}
+Při použití tabbing vypadá tabulka následovně:
+
+\section*{Ovoce}
+Jablka
+
+\section*{Cena Množství}
+Hrušky
+
+$25,90 \quad 3 \mathrm{~kg}$
+
+Vodní melouny
+
+$27,40 \quad 2,5 \mathrm{~kg}$
+
+$35,-\quad 1$ kus
+
+Toto prostředí se dá také použít pro sázení algoritmů, ovšem vhodnější je použít prostředí algorithm nebo algorithm2e (viz sekce 3).
+
+\subsection*{2.2 Prostředí tabular}
+Další možností, jak vytvořit tabulku, je použít prostředí tabular. Tabulky pak budou vypadat takto ${ }^{1}$ :
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\multirow{2}{*}{Měna} & \multicolumn{2}{|c|}{Cena} \\
+\cline { 2 - 3 }
+ & nákup & prodej \\
+\hline
+EUR & 25,475 & 27,045 \\
+GBP & 28,835 & 30,705 \\
+USD & 22,943 & 24,357 \\
+\hline
+\end{tabular}
+\end{center}
+
+Tabulka 1: Tabulka kurzů $\mathrm{k}$ dnešnímu dni
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ &  & \multicolumn{2}{|c|}{\multirow{2}{*}}{$A \wedge B$} & \multicolumn{4}{|c|}{$B$} & \multicolumn{2}{|c|}{\multirow{2}{*}}{$A \vee B$} & \multicolumn{4}{|c|}{$B$} & \multicolumn{2}{|c|}{\multirow{2}{*}}{$A \rightarrow B$} & \multicolumn{4}{|c|}{$B$} \\
+\hline
+$\frac{A}{\mathbf{P}}$ & $\frac{\neg A}{\mathrm{~N}}$ &  &  & $\mathbf{P}$ & O & $\mathbf{X}$ & $\mathbf{N}$ &  &  & $\mathbf{P}$ & $\mathbf{O}$ & $\mathbf{X}$ & $\mathbf{N}$ &  &  & $\mathbf{P}$ & O & $\mathbf{X}$ & $\mathbf{N}$ \\
+\hline
+$\frac{1}{0}$ & $\frac{\mathrm{N}}{\mathrm{O}}$ &  & $\mathbf{P}$ & $\mathrm{P}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{N}$ &  & $\mathbf{P}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ &  & $\mathbf{P}$ & $\mathrm{P}$ & $\mathrm{O}$ & $\mathrm{X}$ & $\mathrm{N}$ \\
+\hline
+$\frac{U}{Y}$ & $\frac{\mathrm{U}}{\mathrm{Y}}$ & $\Delta$ & 0 & $\mathrm{O}$ & $\mathrm{O}$ & $\bar{N}$ & $\mathrm{~N}$ & 4 & 0 & $\mathrm{P}$ & $\mathrm{O}$ & $\mathrm{P}$ & $\mathrm{O}$ & 4 & $\mathbf{O}$ & $\bar{P}$ & $\mathrm{O}$ & $\mathrm{P}$ & $\overline{\mathrm{O}}$ \\
+\hline
+$\mathbf{A}$ & $\frac{A}{D}$ & A & $\mathbf{X}$ & $\mathrm{X}$ & $\mathrm{N}$ & $\mathrm{X}$ & $\mathrm{N}$ &  & $\mathbf{X}$ & $\mathrm{P}$ & $\mathrm{P}$ & $X$ & $\mathrm{X}$ & $A$ & $\mathbf{X}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{X}$ & $\bar{X}$ \\
+\hline
+N & $P$ &  & $\mathbf{N}$ & $\bar{N}$ & $\mathrm{~N}$ & $\bar{N}$ & $\mathrm{~N}$ &  & $\mathbf{N}$ & $\mathrm{P}$ & $\mathrm{O}$ & $X$ & $\mathrm{~N}$ &  & $\mathbf{N}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ & $\mathrm{P}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Tabulka 2: Protože Kleeneho trojhodnotová logika už je „zastaralá“, uvádíme si zde příklad čtyřhodnotové logiky
+\footnotetext{${ }^{1}$ Kdyby byl problem s cline, zkuste se podívat třeba sem: \href{http://www.abclinuxu.cz/tex/poradna/show/325037}{http://www.abclinuxu.cz/tex/poradna/show/325037}.
+}
+
+\section*{3 Algoritmy}
+Pokud budeme chtít vysázet algoritmus, můžeme použít prostředí algorithm ${ }^{2}$ nebo algorithm2 $\mathrm{e}^{3}$. Příklad použití prostředí algorithm2e viz Algoritmus 1.
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2024_03_27_ed4ecc9695be650ae315g-3(1)}
+\end{center}
+
+\section*{4 Obrázky}
+Do našich článků můžeme samozřejmě vkládat obrázky. Pokud je obrázkem fotografie, můžeme klidně použít bitmapový soubor. Pokud by to ale mělo být nějaké schéma nebo něco podobného, je dobrým zvykem takovýto obrázek vytvořit vektorově.\\
+\includegraphics[max width=\textwidth, center]{2024_03_27_ed4ecc9695be650ae315g-3}
+
+Obrázek 1: Malý Etiopánek a jeho bratřríček
+\footnotetext{${ }^{2}$ Pro nápovědu, jak zacházet s prostředím algorithm, můžeme zkusit tuhle stránku: http:/ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf.
+
+${ }^{3}$ Pro algorithm2e zase tuhle: \href{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}.
+}
+
+Rozdíl mezi vektorovým ...
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2024_03_27_ed4ecc9695be650ae315g-4(1)}
+\end{center}
+
+Obrázek 2: Vektorový obrázek
+
+... a bitmapovým obrázkem
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2024_03_27_ed4ecc9695be650ae315g-4}
+\end{center}
+
+Obrázek 3: Bitmapový obrázek
+
+se projeví například při zvětšení.
+
+Odkazy (nejen ty) na obrázky 1,2 a 3, na tabulky 1 a 2 a také na algoritmus 1 jsou udělány pomocí křížových odkazů. Pak je ovšem potřeba zdrojový soubor přeložit dvakrát.
+
+Vektorové obrázky lze vytvořit i přímo v IATEXu, například pomocí prostředí picture.
+
+\begin{center}
+\includegraphics[max width=\textwidth]{2024_03_27_ed4ecc9695be650ae315g-5}
+\end{center}
+
+Obrázek 4: Vektorový obrázek moderního bydlení vhodného pro 21. století. (Bud to vytvořte stejný obrázek, anebo nakreslete pomocí picture váš vlastní domov.)
+
+
+\end{document}

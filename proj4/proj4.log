@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.1)  5 APR 2024 00:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,16 +279,22 @@ Package hyperref Info: Link coloring OFF on input line 18.
 \@outlinefile=\write3
 \openout3 = `proj4.out'.
 
+[1
 
-Overfull \hbox (7.88232pt too wide) in paragraph at lines 22--27
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+Overfull \hbox (7.88232pt too wide) in paragraph at lines 36--41
 []\T1/ptm/m/n/10.95 2 monografie (alespo¬ jedna musí být cizojazy£ná), 3 elektr
 onické dokumenty (online), 1 seriálovou publikaci
  []
 
-[1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}] (./proj4.aux)
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 \end{document}
+                    [1] (./proj4.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -304,18 +310,18 @@ Package rerunfilecheck Info: Checksums for `proj4.out':
 (rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9205 strings out of 474104
- 144975 string characters out of 5743474
- 1930493 words of memory out of 5000000
- 31523 multiletter control sequences out of 15000+600000
- 561091 words of font info for 39 fonts, out of 8000000 for 9000
+ 9221 strings out of 474104
+ 145222 string characters out of 5743474
+ 1928493 words of memory out of 5000000
+ 31533 multiletter control sequences out of 15000+600000
+ 579689 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,1164b,446s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,1164b,462s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on proj4.pdf (1 page, 20341 bytes).
+Output written on proj4.pdf (2 pages, 22500 bytes).
 PDF statistics:
- 19 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 22 PDF objects out of 1000 (max. 8388607)
+ 15 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

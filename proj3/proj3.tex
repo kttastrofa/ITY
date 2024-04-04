@@ -2,11 +2,13 @@
 \documentclass[11pt]{article}
 
 %packages
-\package{geometry}
-\package{babel}[czech]
-\package{times}
-\package{picture}
-\package{tabbing}
+\usepackage{geometry}
+\usepackage{babel}[czech]
+\usepackage{times}
+\usepackage{picture}
+\usepackage{tabbing}
+\usepackage{tabular}
+\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 
 
@@ -46,7 +48,7 @@
     \section{Tabulky}
         Pro sázení tabulek můžeme použít bud prostředí \verb|tabbing| nebo prostředí \verb|tabular|.
 
-        \subsection{Prostředí \verb|tabbing|}
+        \subsection{Prostředí \texttt{tabbing}}
             Při použití \verb|tabbing| vypadá tabulka následovně:
             \begin{tabbing}
                     Ovoce           \= Cena     \= Množství     \\
@@ -57,7 +59,7 @@
             %\\
             Toto prostředí se dá také použít pro sázení algoritmů, ovšem vhodnější je použít prostředí \verb|algorithm| nebo \verb|algorithm2e| (viz sekce 3).
 
-        \subsection{Prostředí \verb|tabular|}
+        \subsection{Prostředí \texttt{tabular}}
             Další možností, jak vytvořit tabulku, je použít prostředí \verb|tabular|. Tabulky pak budou vypadat takto\footnote[1]{Kdyby byl problem s \verb|cline|, zkuste se podívat třeba sem: \href{http://www.abclinuxu.cz/tex/poradna/show/325037}{http://www.abclinuxu.cz/tex/poradna/show/325037}.}:
 
             \begin{center}
@@ -101,7 +103,7 @@
 
 
     \section{Algoritmy}
-        Pokud budeme chtít vysázet algoritmus, můžeme použít prostředí \verb|algorithm|\footnote[2]{Pro nápovědu, jak zacházet s prostředím \verb|algorithm|, mužeme zkusit tuhle stránku:\href{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf}{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf}.} nebo \evrb|algorithm2|\footnote[3]{Pro \verb|algorithm2| zase tuhle: \href{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}.} Příklad použití prostředí \verb|algorithm2e| viz Algoritmus 1.
+        Pokud budeme chtít vysázet algoritmus, můžeme použít prostředí \verb|algorithm|\footnote[2]{Pro nápovědu, jak zacházet s prostředím \verb|algorithm|, mužeme zkusit tuhle stránku:\href{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf}{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithms/algorithms.pdf}.} nebo \verb|algorithm2|\footnote[3]{Pro \verb|algorithm2| zase tuhle: \href{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}{http://ftp.cstug.cz/pub/tex/CTAN/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}.} Příklad použití prostředí \verb|algorithm2e| viz Algoritmus 1.
 
 
     \section{Obrázky}

@@ -1,19 +1,33 @@
-# K suboru: proj3.tex
-# K suboru: proj3.tex
-# Datum:    03.04.2024
-# Autor:    Katarina Meciarova (xmeciak00)
-# Projekt:  ITY projekt 2
+PROJECT = 'latex_and_Makefile'
+MAIN = proj3
 
-PROJ=proj3
+SHELL=/bin/bash
+DATE = $(shell date +"%d%b%Y")
+OPT = --interaction=nonstopmode
 
-$(PROJ).pdf: $(PROJ).tex
-	latex $(PROJ).tex
-	latex $(PROJ).tex
-	dvips -t a4 $(PROJ).dvi
-	ps2pdf $(PROJ).ps
+all: $(MAIN).pdf
+
+
+$(MAIN).pdf: $(TEX_SOURCES) $(FIGURES)
+	pdflatex $(MAIN)
+	makeindex $(MAIN)
+	bibtex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
+	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
+
+
+once:
+	pdflatex $(MAIN)
 
 clean:
-	rm -f $(PROJ).aux $(PROJ).dvi $(PROJ).log $(PROJ).ps $(PROJ).out
+	-rm -f $(MAIN).{pdf,log,blg,bbl,aux,out,toc,idx,bcf,run.xml,ind,ilg,fls,fdb_latexmk} final.pdf
 
-clean-all: clean
-	rm -f $(PROJ).pdf
+	pdflatex $(MAIN)
+	makeindex $(MAIN)
+	bibtex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
+	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
+
+.PHONY: clean all

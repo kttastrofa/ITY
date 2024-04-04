@@ -7,9 +7,11 @@
 \usepackage{times}
 \usepackage{picture}
 \usepackage{tabbing}
-\usepackage{tabular}
+\usepackage{tabulary}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 
 
@@ -60,14 +62,15 @@
             Toto prostředí se dá také použít pro sázení algoritmů, ovšem vhodnější je použít prostředí \verb|algorithm| nebo \verb|algorithm2e| (viz sekce 3).
 
         \subsection{Prostředí \texttt{tabular}}
-            Další možností, jak vytvořit tabulku, je použít prostředí \verb|tabular|. Tabulky pak budou vypadat takto\footnote[1]{Kdyby byl problem s \verb|cline|, zkuste se podívat třeba sem: \href{http://www.abclinuxu.cz/tex/poradna/show/325037}{http://www.abclinuxu.cz/tex/poradna/show/325037}.}:
+            Další možností, jak vytvořit tabulku, je použít prostředí \verb|tabular|.
+            Tabulky pak budou vypadat takto\footnote[1]{Kdyby byl problem s \verb|cline|, zkuste se podívat třeba sem: \href{http://www.abclinuxu.cz/tex/poradna/show/325037}{http://www.abclinuxu.cz/tex/poradna/show/325037}.}:
 
             \begin{center}
                 \begin{tabular}{|l|c|c|}
                     \hline
                     \multirow{2}{*}{Měna} & \multicolumn{2}{|c|}{Cena} \\
 
-                                            \cline { 2 - 3 }
+                                            \cline { 2--3 }
                                             & nákup     & prodej \\
 
                     \hline

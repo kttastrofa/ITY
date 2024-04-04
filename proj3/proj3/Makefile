@@ -1,5 +1,12 @@
 PROJECT = 'latex_and_Makefile'
 MAIN = proj3
+TEX_SOURCES = Makefile \
+              $(MAIN).tex \
+                oniisan.eps \
+                oniisan2.eps \
+                etiopan.eps
+
+FIGURES := $(shell find images/* -type f)
 
 SHELL=/bin/bash
 DATE = $(shell date +"%d%b%Y")
@@ -29,5 +36,10 @@ clean:
 	pdflatex $(MAIN)
 	pdflatex $(MAIN)
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
+zip:
+	$(MAKE) clean
+	$(MAKE) all
+	$(MAKE) clean
+	zip -q $(MAIN).zip $(TEX_SOURCES) $(FIGURES) proj3.pdf
 
 .PHONY: clean all

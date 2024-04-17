@@ -2,11 +2,7 @@ PROJECT = 'latex_and_Makefile'
 MAIN = proj4
 TEX_SOURCES = Makefile \
               $(MAIN).tex \
-                oniisan.eps \
-                oniisan2.eps \
-                etiopan.eps
-
-FIGURES := $(shell find images/* -type f)
+              $(MAIN).bib
 
 SHELL=/bin/bash
 DATE = $(shell date +"%d%b%Y")
@@ -15,12 +11,14 @@ OPT = --interaction=nonstopmode
 all: $(MAIN).pdf
 
 
-$(MAIN).pdf: $(TEX_SOURCES) $(FIGURES)
-	pdflatex $(MAIN)
-	makeindex $(MAIN)
+$(MAIN).pdf: $(TEX_SOURCES)
+	pdflatex $(OPT) $(MAIN)
+	#makeindex $(OPT) $(MAIN)
 	bibtex $(MAIN)
-	pdflatex $(MAIN)
-	pdflatex $(MAIN)
+	pdflatex $(OPT) $(MAIN)
+	pdflatex $(OPT) $(MAIN)
+	pdflatex $(OPT) $(MAIN)
+	pdflatex $(OPT) $(MAIN)
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
 
 
@@ -31,7 +29,7 @@ clean:
 	-rm -f $(MAIN).{pdf,log,blg,bbl,aux,out,toc,idx,bcf,run.xml,ind,ilg,fls,fdb_latexmk} final.pdf
 
 	pdflatex $(MAIN)
-	makeindex $(MAIN)
+	#makeindex $(MAIN)
 	bibtex $(MAIN)
 	pdflatex $(MAIN)
 	pdflatex $(MAIN)

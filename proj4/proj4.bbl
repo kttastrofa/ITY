@@ -1,0 +1,47 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{typo}
+Blážek, F.: Fatal Error. \emph{TYPO}, 2010.
+
+\bibitem{rhythm}
+Celso, A.~L.: Rhythm in type design. 2005.
+\newline\urlprefix\url{https://www.academia.edu/9477868/Rhythm\_in\_Type\_Design}
+
+\bibitem{LR}
+Chomsky, N.: \emph{On Language - Chomsky's classical works: Language and
+  Responsibility and Reflections on Language in one volume}. The New Press,
+  1977, 1979, 1975, ISBN 1-56584-475-0.
+
+\bibitem{types}
+Crisp, D.~G.: Graphic Design in Context: Typography. 2012.
+\newline\urlprefix\url{https://www.academia.edu/33412573/Graphic\_Design\_in\_Context\_Typography\_Ten\_Type\_Project\_Briefs}
+
+\bibitem{critisism}
+Elkins, J.: Art Critisism.
+\newline\urlprefix\url{https://www.academia.edu/163427/Art\_Criticism\_dictionary\_essay\_}
+
+\bibitem{hmota}
+Hluchá, M.: Ako sa lúčime so svetom. In \emph{Hmota}, 2023.
+
+\bibitem{ModernTypo}
+Kinross, R.: \emph{Moderni typografie Kriticko-historicka esej}. Umprum, 2020.
+
+\bibitem{emotions}
+Koch, B.~E.: Human emotion response to typographic design. 2011.
+
+\bibitem{culturalenviro}
+Paek, J.~Y.: Typography in cross cultural enviroments. 2014.
+
+\bibitem{mag}
+tidwell, K.: The Art and Science of Typography in 100 Principles.
+  \emph{Printmag}, april 2024.
+
+\end{thebibliography}

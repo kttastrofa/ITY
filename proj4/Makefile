@@ -6,19 +6,17 @@ TEX_SOURCES = Makefile \
 
 SHELL=/bin/bash
 DATE = $(shell date +"%d%b%Y")
-OPT = --interaction=nonstopmode
 
 all: $(MAIN).pdf
 
 
 $(MAIN).pdf: $(TEX_SOURCES)
-	pdflatex $(OPT) $(MAIN)
-	#makeindex $(OPT) $(MAIN)
-	bibtex $(MAIN)
-	pdflatex $(OPT) $(MAIN)
-	pdflatex $(OPT) $(MAIN)
-	pdflatex $(OPT) $(MAIN)
-	pdflatex $(OPT) $(MAIN)
+	pdflatex $(MAIN).tex
+	bibtex $(MAIN).aux
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
 
 
@@ -28,11 +26,12 @@ once:
 clean:
 	-rm -f $(MAIN).{pdf,log,blg,bbl,aux,out,toc,idx,bcf,run.xml,ind,ilg,fls,fdb_latexmk} final.pdf
 
-	pdflatex $(MAIN)
-	#makeindex $(MAIN)
-	bibtex $(MAIN)
-	pdflatex $(MAIN)
-	pdflatex $(MAIN)
+	pdflatex $(MAIN).tex
+	bibtex $(MAIN).aux
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
+	pdflatex $(MAIN).tex
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
 zip:
 	$(MAKE) clean

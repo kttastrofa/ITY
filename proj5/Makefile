@@ -4,30 +4,32 @@
 
 PROJECT = 'latex_and_Makefile'
 MAIN = proj5
-TEX_SOURCES = Makefile \
-			  template/fitthesispresn.cls \
-			  template/beamercolorthemeFIT.sty \
-			  template/beamerfontthemeFIT.sty \
-			  template/beamerinnerthemeFIT.sty \
-			  template/beamerrouterthemeFIT.sty \
-			  template/beamerthemeFIT.sty \
-              $(MAIN).tex
-
-              #$(MAIN).bib
+TEX_SOURCES = 	Makefile \
+              	$(MAIN).tex \
+              	bayer.jpg \
+              	code.png \
+              	in.png \
+              	meme.jpg \
+              	rbt17.png \
+              	rot.png \
+              	references.bib \
+              	czech.mbs \
+              	czechiso.bst \
+              	czechiso.dbj
 
 SHELL=/bin/bash
-DATE = $(shell date +"%d%b%Y")
+
 
 all: $(MAIN).pdf
 
 
 $(MAIN).pdf: $(TEX_SOURCES)
-	pdflatex $(MAIN).tex
-	#bibtex $(MAIN).aux
-	#pdflatex $(MAIN).tex
-	#pdflatex $(MAIN).tex
-	pdflatex $(MAIN).tex
-	pdflatex $(MAIN).tex
+	pdflatex $(MAIN)
+	bibtex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
 
 
@@ -37,13 +39,15 @@ once:
 clean:
 	-rm -f $(MAIN).{pdf,log,blg,bbl,aux,out,toc,idx,bcf,run.xml,ind,ilg,fls,fdb_latexmk} final.pdf
 
-	pdflatex $(MAIN).tex
-	#bibtex $(MAIN).aux
-	#pdflatex $(MAIN).tex
-	#pdflatex $(MAIN).tex
-	pdflatex $(MAIN).tex
-	pdflatex $(MAIN).tex
+	pdflatex $(MAIN)
+	bibtex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
+	pdflatex $(MAIN)
+
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
+
 zip:
 	$(MAKE) clean
 	$(MAKE) all

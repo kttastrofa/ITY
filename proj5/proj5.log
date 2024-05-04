@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.1)  4 MAY 2024 00:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.1)  4 MAY 2024 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,7 +930,7 @@ Package pdftex.def Info: bayer.jpg  used on input line 48.
  <./bayer.jpg>] [4
 
 ]
-<rbt17.png, id=148, 422.57875pt x 451.6875pt>
+<rbt17.png, id=147, 422.57875pt x 451.6875pt>
 File: rbt17.png Graphic file (type png)
 <use rbt17.png>
 Package pdftex.def Info: rbt17.png  used on input line 95.
@@ -942,7 +942,7 @@ Package pdftex.def Info: rbt17.png  used on input line 95.
 ] [7
 
 ]
-<in.png, id=235, 902.37125pt x 566.115pt>
+<in.png, id=234, 902.37125pt x 566.115pt>
 File: in.png Graphic file (type png)
 <use in.png>
 Package pdftex.def Info: in.png  used on input line 137.
@@ -950,12 +950,12 @@ Package pdftex.def Info: in.png  used on input line 137.
  [8
 
  <./in.png>]
-<code.png, id=266, 414.54875pt x 392.46625pt>
+<code.png, id=265, 414.54875pt x 392.46625pt>
 File: code.png Graphic file (type png)
 <use code.png>
 Package pdftex.def Info: code.png  used on input line 148.
 (pdftex.def)             Requested size: 222.48985pt x 210.63507pt.
-<rot.png, id=267, 287.0725pt x 121.45375pt>
+<rot.png, id=266, 287.0725pt x 121.45375pt>
 File: rot.png Graphic file (type png)
 <use rot.png>
 Package pdftex.def Info: rot.png  used on input line 148.
@@ -965,7 +965,7 @@ Package pdftex.def Info: rot.png  used on input line 148.
  <./code.png> <./rot.png>] [10
 
 ]
-<meme.jpg, id=324, 891.33pt x 500.87125pt>
+<meme.jpg, id=323, 891.33pt x 500.87125pt>
 File: meme.jpg Graphic file (type jpg)
 <use meme.jpg>
 Package pdftex.def Info: meme.jpg  used on input line 168.
@@ -1003,20 +1003,20 @@ Here is how much of TeX's memory you used:
  428954 string characters out of 5743474
  1939493 words of memory out of 5000000
  43994 multiletter control sequences out of 15000+600000
- 573099 words of font info for 70 fonts, out of 8000000 for 9000
+ 573041 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,393b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsi0900.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></us
-r/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/
-local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/lo
-cal/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/te
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/
+local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/lo
+cal/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/
+texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/local/te
 xlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on proj5.pdf (12 pages, 409784 bytes).
+Output written on proj5.pdf (12 pages, 429628 bytes).
 PDF statistics:
  445 PDF objects out of 1000 (max. 8388607)
  367 compressed objects within 4 object streams

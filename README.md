@@ -37,22 +37,6 @@ Pre obraz, kus prvého zadania:
     Nezapomeňte ve svém dokumentu uvést své jméno a e-mailovou adresu.
 
 
-## Základní informace o parametrech dokumentu
-
-Väčšina projektov malo vopred zadané paramentre dokumentu, viď:
-
-    Použití správných parametrů sázeného dokumentu je klíčové pro dosažení vizuálně podobného řešení.
-    
-        rozměry stránky: A4
-        rozměry textové oblasti: 18,2 x 24,1 cm
-        mezera vlevo: 1,8 cm
-        mezera nahoře: 1,8 cm
-        font: standardní 10 pt
-        kódování zdrojového textu (volitelné): utf8
-        kódování fontu: T1
-        sazba na dva sloupce: parametr 'twocolumn' dokumentové třídy 'article'
-
-
 ## Prekladu dokumentu
 
 Všetky LaTeX dokumenty majú v pridelených priečinkoch aj svoje Makefile či BiBTeX dokumenty spolu s poučitými obrázkami.

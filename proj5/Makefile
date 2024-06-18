@@ -33,9 +33,6 @@ $(MAIN).pdf: $(TEX_SOURCES)
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
 
 
-once:
-	pdflatex $(MAIN)
-
 clean:
 	-rm -f $(MAIN).{pdf,log,blg,bbl,aux,out,toc,idx,bcf,run.xml,ind,ilg,fls,fdb_latexmk} final.pdf
 

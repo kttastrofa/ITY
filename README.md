@@ -1,6 +1,6 @@
 # ITY
 
-feb-jun 2024
+VUT FIT 1BIT 2024
 
 ### súkromný historičník a archivár TYPOkusov všetkých verejnohodných (i nevhodných)
 

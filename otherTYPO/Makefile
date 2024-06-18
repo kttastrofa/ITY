@@ -1,21 +1,11 @@
-# name:		Makefile for project 5, ITY
+# name:		Makefile for IMA
 # author: 	Katarína Mečiarová
 #=======================================================================================================================
 
 PROJECT = 'latex_and_Makefile'
-MAIN = proj5
+MAIN = main
 TEX_SOURCES = 	Makefile \
-              	$(MAIN).tex \
-              	pic/bayer.jpg \
-              	pic/code.png \
-              	pic/in.png \
-              	pic/meme.jpg \
-              	pic/rbt17.png \
-              	pic/rot.png \
-              	other/references.bib \
-              	other/czech.mbs \
-              	other/czechiso.bst \
-              	other/czechiso.dbj
+              	$(MAIN).tex
 
 SHELL=/bin/bash
 
@@ -24,10 +14,6 @@ all: $(MAIN).pdf
 
 
 $(MAIN).pdf: $(TEX_SOURCES)
-	pdflatex $(MAIN)
-	bibtex $(MAIN)
-	pdflatex $(MAIN)
-	pdflatex $(MAIN)
 	pdflatex $(MAIN)
 	pdflatex $(MAIN)
 	@#latexmk -pdf -pvc -pdflatex="pdflatex $(OPT)" $(MAIN)
@@ -39,10 +25,6 @@ once:
 clean:
 	-rm -f $(MAIN).{pdf,log,blg,bbl,aux,out,toc,idx,bcf,run.xml,ind,ilg,fls,fdb_latexmk} final.pdf
 
-	pdflatex $(MAIN)
-	bibtex $(MAIN)
-	pdflatex $(MAIN)
-	pdflatex $(MAIN)
 	pdflatex $(MAIN)
 	pdflatex $(MAIN)
 

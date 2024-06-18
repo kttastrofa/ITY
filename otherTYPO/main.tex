@@ -1,0 +1,383 @@
+% zde budiž můj tahák na ima1
+% dávám k dispozici latex abyste si to mohli
+% upravit/vykopírovat-vykrást nebo whatever
+% renderuju to na overleaf ofc
+% autor: vít pavlík
+% datum: 10. 6. 2023
+
+% tady je vhodne 14 pt na zobrazovani elektronicky, 
+% na vytisknuti na realnou A4 asi staci 10, 11 nebo 12pt (da se i 8pt)
+% jde jen 8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+\documentclass[8pt, a5paper]{extarticle}
+\usepackage{pgfpages}
+\usepackage{atbegshi}
+\pgfpagesuselayout{4 on 1}[a4paper]
+
+\pgfpageslogicalpageoptions{1}{copy from=1}
+\pgfpageslogicalpageoptions{2}{copy from=1}
+\pgfpageslogicalpageoptions{3}{copy from=1}
+\pgfpageslogicalpageoptions{4}{copy from=1}
+\pgfpageslogicalpageoptions{5}{copy from=2}
+\pgfpageslogicalpageoptions{6}{copy from=2}
+\pgfpageslogicalpageoptions{7}{copy from=2}
+\pgfpageslogicalpageoptions{8}{copy from=2}
+
+
+\AtBeginShipout{%
+  \pgfpagesshipoutlogicalpage{1}\copy\AtBeginShipoutBox
+  \pgfpagesshipoutlogicalpage{2}\copy\AtBeginShipoutBox
+  \pgfpagesshipoutlogicalpage{3}\copy\AtBeginShipoutBox
+  \pgfpagesshipoutlogicalpage{4}\copy\AtBeginShipoutBox
+  \pgfpagesshipoutlogicalpage{5}\copy\AtBeginShipoutBox
+  \pgfpagesshipoutlogicalpage{6}\copy\AtBeginShipoutBox
+  \pgfpagesshipoutlogicalpage{7}\copy\AtBeginShipoutBox
+  \pgfpagesshipoutlogicalpage{8}\copy\AtBeginShipoutBox
+  \pgfshipoutphysicalpage
+}
+
+
+
+\usepackage[fleqn]{amsmath}
+
+% kvuli datu aby tam nebylo
+\date{\vspace{-5ex}}
+%\date{}  % Toggle commenting to test
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[czech]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+%\usepackage[]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{setspace}
+\usepackage{multicol}
+
+
+\begin{document}
+  \setstretch{0.8}
+  \begin{multicols}{2}
+
+    \[
+      sin^2(x) + cos^2(x) = 1
+    \]
+    \[
+      tg(x) \cdot cotg(x) = 1
+    \]
+    \[
+      tg(x) = \frac{sin(x)}{cos(x)}
+    \]
+    \[
+      cotg(x) = \frac{cos(x)}{sin(x)}
+    \]
+    \[
+      sin(2x) = 2sin(x)cos(x)
+    \]
+    \[
+      cos(2x) = cos^2(x)-sin^2(x)
+    \]
+    \[
+      sin(a + b) = sin(a)cos(b) + cos(a)sin(b)
+    \]
+    \[
+      sin(a - b) = sin(a)cos(b) - cos(a)sin(b)
+    \]
+    \[
+      cos(a + b) = cos(a)cos(b) - sin(a)sin(b)
+    \]
+    \[
+      cos(a - b) = cos(a)cos(b) + sin(a)sin(b)
+    \]
+    \[
+      \int \frac{f'(x)}{f(x)}dx = ln \left| f(x) \right| + C
+    \]
+    \[ \int f(ax + b)dx = \frac{1}{a} F(ax + b) + C, \; F(x) = \int f(x)\]
+    \[
+      \int k dx = kx + C
+    \]
+    \[
+      \int x^n dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)
+    \]
+    \[
+      \int \frac{1}{x} dx = \ln|x| + C
+    \]
+    \[
+      \int e^x dx = e^x + C
+    \]
+    \[
+      \int a^x dx = \frac{a^x}{\ln(a)} + C
+    \]
+    \[
+      \int \sin (x) dx = -\cos x + C
+    \]
+    \[
+      \int \cos (x) dx = \sin x + C
+    \]
+    \[
+      \int \tan (x) dx = -\ln|\cos(x)| + C
+    \]
+    \[
+      \int \frac{1}{a^2+x^2}dx = \frac{1}{a} \arctan\left(\frac{x}{a}\right) + C
+    \]
+    \[
+      \int \frac{1}{\sqrt{a^2-x^2}}dx = \arcsin\left(\frac{x}{a}\right) + C
+    \]
+    \[
+      \int \frac{1}{\sin^2(x)} = \cot(x) + C
+    \]
+    \[
+      \int \frac{1}{\cos^2(x)} = \tan(x) + C
+    \]
+    \[
+      \int \sin^2(x) dx = \frac{x - \sin(x)\cos(x)}{2} + C
+    \]
+    \[\int \ln(x) dx = x(\ln(x)-1) + C\]
+    \begin{itemize}
+      \item to by se spočítalo per partes, kde $u=\ln(x); v' = 1$
+    \end{itemize}
+  \end{multicols}
+  \textbf{Asymptota se směrnicí}
+  \[
+    y = ax + b
+  \]
+  \[
+    a=\lim_{x\to\infty} \frac{f(x)}{x} \\
+  \]
+  \[
+    b=\lim_{x\to\infty} f(x)-kx
+  \]
+  \textbf{Objem rotačního tělesa}
+  \[
+    V = \pi \cdot \int_{a}^{b}(f(x))^2 \: dx \;\; j^2
+  \]
+  \textbf{Simpsonovo pravidlo 1/3 (kvadratická interpolace)}
+  \[
+    \int_{a}^{b} f(x)dx = \frac{b-a}{6} \left( f(a) + 4f\left(\frac{a+b}{2}\right) + f\left(b\right) \right)
+  \]
+
+  \textbf{Elipsa}
+  \begin{multicols}{2}
+    \[
+      \frac{(x-m)^2}{a^2} + \frac{(y-n)^2}{b^2} = k
+    \]
+
+    kde \textbf{a} a \textbf{b} jsou délky hlavní a vedlejší poloosy, \textbf{m} a \textbf{n} je posunutí a \textbf{k} je součinitel velikosti (obyčejně v té rovnici bývá jednička ale o elipsu se jedná i když je to jiné číslo)
+  \end{multicols}
+  \begin{multicols}{3}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      $\theta$ & $\theta$ & $\sin(\theta)$ & $\cos(\theta)$ \\
+      \hline
+      $0^\circ$ & $0$ & $0$ & $1$ \\
+      $30^\circ$ & $\frac{\pi}{6}$ & $\frac{1}{2}$ & $\frac{\sqrt{3}}{2}$ \\
+      $45^\circ$ & $\frac{\pi}{4}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{2}}{2}$ \\
+      $60^\circ$ & $\frac{\pi}{3}$ & $\frac{\sqrt{3}}{2}$ & $\frac{1}{2}$ \\
+      $90^\circ$ & $\frac{\pi}{2}$ & $1$ & $0$ \\
+      \hline
+    \end{tabular}
+
+    \[
+      (fg)' = f'g \cdot fg'
+    \]
+    \[
+      \left ( \frac{f}{g} \right )' = \frac{f'g - fg'}{g^2}
+    \]
+    \[
+      (f(g))' = f'(g) \cdot g'
+    \]
+    \[
+      (ln(x))'=\frac{1}{x}
+    \]
+  \end{multicols}
+  \begin{multicols}{2}
+    \section{newtonova metoda}
+    podminky konvergence:
+
+    1: spojita prvni i druha derivace
+
+    2: prvni derivace nikde neni nulova
+
+    3: prvni ani druha derivace nemeni znamenko
+
+    volime $x_0$ tak aby funkcni hodnota a druha derivace meli stejne znamenko
+
+    vzorec pro dalsi aproximace
+    \[
+      x_{n+1}=x_n - \frac{f(x_n)}{f'(x_n)}\]
+  \end{multicols}
+  \begin{multicols}{5}
+  [
+  ]
+  {\footnotesize{{
+    \[
+          \sqrt{1} = 1,00
+        \]
+        \[
+          \sqrt{2} = 1,41
+        \]
+        \[
+          \sqrt{3} = 1,73
+        \]
+        \[
+          \sqrt{4} = 2,00
+        \]
+        \[
+          \sqrt{5} = 2,24
+        \]
+        \[
+          \sqrt{6} = 2,45
+        \]
+        \[
+          \sqrt{7} = 2,65
+        \]
+        \[
+          \sqrt{8} = 2,83
+        \]
+        \[
+          \sqrt{9} = 3,00
+        \]
+        \[
+          \sqrt{10} = 3,16
+        \]
+        \[
+          \sqrt{11} = 3,32
+        \]
+        \[
+          \sqrt{12} = 3,46
+        \]
+        \[
+          \sqrt{13} = 3,61
+        \]
+        \[
+          \sqrt{14} = 3,74
+        \]
+        \[
+          \sqrt{15} = 3,87
+        \]
+        \[
+          \sqrt{16} = 4,00
+        \]
+        \[
+          \sqrt{17} = 4,12
+        \]
+        \[
+          \sqrt{18} = 4,24
+        \]
+        \[
+          \sqrt{19} = 4,36
+        \]
+        \[
+          \sqrt{20} = 4,47
+        \]
+        \[
+          \sqrt{21} = 4,58
+        \]
+        \[
+          \sqrt{22} = 4,69
+        \]
+        \[
+          \sqrt{23} = 4,80
+        \]
+        \[
+          \sqrt{24} = 4,90
+        \]
+        \[
+          \sqrt{25} = 5,00
+        \]
+        \[
+          \sqrt{26} = 5,10
+        \]
+
+        \[
+          \sqrt[3]{1} = 1,00
+        \]
+        \[
+          \sqrt[3]{2} = 1,26
+        \]
+        \[
+          \sqrt[3]{3} = 1,44
+        \]
+        \[
+          \sqrt[3]{4} = 1,59
+        \]
+        \[
+          \sqrt[3]{5} = 1,71
+        \]
+        \[
+          \sqrt[3]{6} = 1,82
+        \]
+        \[
+          \sqrt[3]{7} = 1,91
+        \]
+        \[
+          \sqrt[3]{8} = 2,00
+        \]
+        \[
+          \sqrt[3]{9} = 2,08
+        \]
+        \[
+          \sqrt[3]{10} = 2,15
+        \]
+        \[
+          \sqrt[3]{11} = 2,22
+        \]
+        \[
+          \sqrt[3]{12} = 2,29
+        \]
+        \[
+          \sqrt[3]{13} = 2,35
+        \]
+        \[
+          \sqrt[3]{14} = 2,41
+        \]
+        \[
+          \sqrt[3]{15} = 2,47
+        \]
+        \[
+          \sqrt[3]{16} = 2,52
+        \]
+        \[
+          \sqrt[3]{17} = 2,57
+        \]
+        \[
+          \sqrt[3]{18} = 2,62
+        \]
+        \[
+          \sqrt[3]{19} = 2,67
+        \]
+        \[
+          \sqrt[3]{20} = 2,71
+        \]
+        \[
+          \sqrt[3]{21} = 2,76
+        \]
+        \[
+          \sqrt[3]{22} = 2,80
+        \]
+        \[
+          \sqrt[3]{23} = 2,84
+        \]
+        \[
+          \sqrt[3]{24} = 2,88
+        \]
+        \[
+          \sqrt[3]{25} = 2,92
+        \]
+        \[
+          \sqrt[3]{26} = 2,96
+        \]}}}
+
+  \end{multicols}
+
+
+
+
+
+
+
+\end{document}
